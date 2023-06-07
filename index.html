@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>upsocial player</title>
+  </head>
+  <body>
+    <video controls>
+      <source id="video_tags" src="" type="video/mp4" />
+    </video>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const paramdata = urlParams.get("ipfs");
+      document
+        .getElementById("video_tags")
+        .setAttribute("src", "https://g.upsocial.com/ipfs/" + paramdata);
+    </script>
+  </body>
+</html>
